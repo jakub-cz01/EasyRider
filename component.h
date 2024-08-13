@@ -7,7 +7,7 @@ class Component
 {
 public:
     virtual void Update(int deltaTime) = 0;
-    virtual std::string GetComponentId() = 0;
+    virtual std::string GetComponentId() const = 0;
     virtual ~Component(){}
 };
 

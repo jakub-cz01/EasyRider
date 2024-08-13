@@ -26,6 +26,14 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         simulationloop.h simulationloop.cpp
         component.h
         simulationloop.cpp
+        trafficlighttimer.h trafficlighttimer.cpp
+        trafficlight.h trafficlight.cpp
+        trafficlightstate.h
+        vehiclemanager.h vehiclemanager.cpp
+        vehicle.h vehicle.cpp
+        vehiclestate.h vehiclestate.cpp
+
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET EasyRider APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

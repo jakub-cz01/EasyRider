@@ -22,8 +22,10 @@ public:
     void RemoveComponent(Component * component);
     void SetSimulationSpeed(double speed);
 
+    SimulationLoop(const SimulationLoop&) = delete;
+    void operator=(const SimulationLoop&) = delete;
 private:
-    SimulationLoop(QObject *parent = nullptr) : QObject(parent) {}
+    explicit SimulationLoop(QObject *parent = nullptr) : QObject(parent) {}
     std::unordered_map<std::string, Component*> m_Components;
     QTimer m_LoopTimer;
     QElapsedTimer m_ElapsedTimer;
