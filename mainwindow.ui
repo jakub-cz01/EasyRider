@@ -7,14 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>577</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QGraphicsView" name="SimulationView">
+   <widget class="StreetMap" name="MapView">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -33,25 +33,250 @@
       <height>551</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout"/>
+    <layout class="QVBoxLayout" name="Side">
+     <property name="leftMargin">
+      <number>4</number>
+     </property>
+     <property name="topMargin">
+      <number>4</number>
+     </property>
+     <property name="rightMargin">
+      <number>4</number>
+     </property>
+     <property name="bottomMargin">
+      <number>4</number>
+     </property>
+     <item>
+      <spacer name="verticalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Orientation::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Policy::Maximum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Orientation::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Policy::Maximum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <layout class="QVBoxLayout" name="SimSpeedLayout">
+         <item>
+          <spacer name="verticalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="SimSpeedLabel">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::ContextMenuPolicy::NoContextMenu</enum>
+           </property>
+           <property name="text">
+            <string>Prędkość symulacji: 1x</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSlider" name="SimSpeedSlider">
+           <property name="minimum">
+            <number>-2</number>
+           </property>
+           <property name="maximum">
+            <number>2</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+           <property name="sliderPosition">
+            <number>0</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="CarLimitLayout">
+         <item>
+          <spacer name="verticalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="CarLimitLabel">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::ContextMenuPolicy::NoContextMenu</enum>
+           </property>
+           <property name="text">
+            <string>Limit aut: 100</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSlider" name="CarLimitSlider">
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>25</number>
+           </property>
+           <property name="value">
+            <number>10</number>
+           </property>
+           <property name="sliderPosition">
+            <number>10</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="SpawnLayout">
+         <item>
+          <spacer name="verticalSpacer_7">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="SpawnLabel">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::ContextMenuPolicy::NoContextMenu</enum>
+           </property>
+           <property name="text">
+            <string>Czas tworzenia aut: 1s</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSlider" name="SpawnSlider">
+           <property name="minimum">
+            <number>-2</number>
+           </property>
+           <property name="maximum">
+            <number>3</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+           <property name="sliderPosition">
+            <number>0</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Policy::Maximum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="PauseButton">
+       <property name="text">
+        <string>Wstrzymaj symulację</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="ClearButton">
+       <property name="text">
+        <string>Wyczyść auta</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Orientation::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Policy::Maximum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuMenu">
-    <property name="title">
-     <string>Menu</string>
-    </property>
-    <addaction name="actionZmiana_mapy"/>
-   </widget>
-   <addaction name="menuMenu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionZmiana_mapy">
@@ -60,6 +285,13 @@
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>StreetMap</class>
+   <extends>QGraphicsView</extends>
+   <header>streetmap.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

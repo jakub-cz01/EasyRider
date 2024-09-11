@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/">
+        <file>textures/roads/grass.png</file>
+        <file>textures/roads/h_road.png</file>
+        <file>textures/roads/intersection.png</file>
+        <file>textures/roads/v_road.png</file>
+        <file>textures/vehicles/ambulance_animation/1.png</file>
+        <file>textures/vehicles/ambulance_animation/2.png</file>
+        <file>textures/vehicles/ambulance_animation/3.png</file>
+        <file>textures/vehicles/Police_animation/1.png</file>
+        <file>textures/vehicles/Police_animation/2.png</file>
+        <file>textures/vehicles/Police_animation/3.png</file>
+        <file>textures/vehicles/Ambulance.png</file>
+        <file>textures/vehicles/Audi.png</file>
+        <file>textures/vehicles/Black_viper.png</file>
+        <file>textures/vehicles/Car.png</file>
+        <file>textures/vehicles/Mini_truck.png</file>
+        <file>textures/vehicles/Mini_van.png</file>
+        <file>textures/vehicles/Police.png</file>
+        <file>textures/vehicles/preview_carspritespack.jpg</file>
+        <file>textures/vehicles/Read Me.txt</file>
+        <file>textures/vehicles/taxi.png</file>
+        <file>textures/vehicles/truck.png</file>
+        <file>textures/sygnalizacja_g.png</file>
+        <file>textures/sygnalizacja_n.png</file>
+        <file>textures/sygnalizacja_r.png</file>
+        <file>textures/sygnalizacja_y.png</file>
+    </qresource>
+</RCC>

@@ -24,14 +24,31 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         simulationloop.h simulationloop.cpp
-        component.h
+        simulatedobject.h
         simulationloop.cpp
-        trafficlighttimer.h trafficlighttimer.cpp
+
         trafficlight.h trafficlight.cpp
         trafficlightstate.h
         vehiclemanager.h vehiclemanager.cpp
         vehicle.h vehicle.cpp
-        vehiclestate.h vehiclestate.cpp
+
+        vehicledriver.h vehicledriver.cpp
+        streetmapnode.h streetmapnode.cpp
+        streetmap.h streetmap.cpp
+        vehicledriverstate.h
+
+        simulatedobject.cpp
+        straightstreet.h straightstreet.cpp
+        intersection.h intersection.cpp
+        spawnpoint.h spawnpoint.cpp
+        resources.qrc
+        movedirection.h
+        stoppedstate.h stoppedstate.cpp
+        drivingstate.h drivingstate.cpp
+        followingstate.h followingstate.cpp
+        genericdistance.h
+
+
 
 
     )
@@ -70,6 +87,7 @@ set_target_properties(EasyRider PROPERTIES
 )
 
 include(GNUInstallDirs)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 install(TARGETS EasyRider
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
